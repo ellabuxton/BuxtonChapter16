@@ -1,0 +1,23 @@
+---
+title: "Flag_Weather_Doc"
+output: pdf_document
+date: "2023-12-05"
+---
+
+This Rmarkdown file will do the analysis.
+
+```{r}
+library(TestPackage)   # load Flagstaff_Weather
+library(ggplot2)       # which includes Flagstaff_Weather data frame
+
+ggplot(Flagstaff_Weather, aes(x=DATE, y=TMAX)) +
+  geom_line()
+ggplot(Flagstaff_Weather, aes(x=DATE, y=TMIN)) +
+  geom_line()
+ggplot(Flagstaff_Weather, aes(x=DATE, y=RAIN)) +
+  geom_line()
+ggplot(Flagstaff_Weather, aes(x=DATE, y=SNOW)) +
+  geom_line()
+```
+
+We see that the daily max temperature in Flagstaff varies quite a lot.
